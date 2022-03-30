@@ -43,11 +43,17 @@ export class WellListComponent implements OnInit, AfterViewInit {
         type: newWellDetails.wellType,
         sourceKey: newWellDetails.sourceKey,
       });
-      this.wellComponent.wellForm.form.reset();
+      this.resetWellForm();
     }
   }
 
   onSourceKeySelect(sourceKey: string) {
     this.sourceKeyValue = sourceKey;
+    this.resetWellForm();
+  }
+
+  resetWellForm(): void {
+    this.wellComponent.wellForm.controls.wellName.reset();
+    this.wellComponent.wellForm.controls.wellType.setValue('');
   }
 }
