@@ -1,0 +1,38 @@
+.list-item {
+  /* height: 100%; */
+  /* height: 100vh; */
+  /* display: flex; */
+  border: 3px dotted #009999;
+  height: fit-content;
+  overflow-y: visible;
+}
+
+.list-item > div {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item > div div {
+  height: 35px;
+  background-color: #66ffff;
+  width: 100%;
+  margin: 1px;
+  cursor: pointer;
+  padding: 5px;
+  color: #006666;
+}
+
+.drop-container {
+  border: 3px dotted #009999;
+  height: 100vh;
+  padding: 10px;
+  min-height: 450px;
+  height: auto;
+  overflow: auto;
+}
+
+.instructions-text {
+  color: #006666;
+  text-align: center;
+}

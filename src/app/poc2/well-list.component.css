@@ -1,0 +1,13 @@
+.pinkBg {
+  background-color: #ffcccc;
+  color: #ff8080;
+}
+
+.greenBg {
+  background-color: #b3ffb3;
+  color: #00cc00;
+}
+
+.wellRow {
+  cursor: pointer;
+}

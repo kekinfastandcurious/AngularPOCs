@@ -1,0 +1,21 @@
+[{
+	"name": "TESTRlsWell01",
+	"type": "rls",
+	"sourceKey": "10101"
+}, {
+	"name": "TESTEspWell01",
+	"type": "esp",
+	"sourceKey": "1111"
+}, {
+	"name": "TESTEspWell02",
+	"type": "esp",
+	"sourceKey": "10101"
+}, {
+	"name": "TESTRlsWell02",
+	"type": "rls",
+	"sourceKey": "1111"
+}, {
+	"name": "TESTRlsWell03",
+	"type": "rls",
+	"sourceKey": "1111"
+}]

@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{user.name}}</td>
+                    <td>{{user.age}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <ng-template #toggleFlagFalseContent>
+            <p>This is Users information displayed conditionally when toggleFlag is <span class="colorRed">False</span>.</p>
+        </ng-template>
+        <ng-container *ngIf="toggleFlag;else toggleFlagFalseContent">
+            <p>This is Users information displayed conditionally when toggleFlag is <span class="colorGreen">True</span>.</p>
+        </ng-container>    
+        <button class="btn btn-primary" (click)="onToggleFlag()">Toggle Value</button>
+    </div>
+</div>

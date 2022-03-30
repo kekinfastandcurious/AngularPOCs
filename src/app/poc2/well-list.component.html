@@ -1,0 +1,25 @@
+<!-- <div class="p5"> -->
+    <div class="row">
+        <div class="col-md-6 align-self-center">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let well of wells" (click)="onSourceKeySelect(well.sourceKey)" class="wellRow">
+                        <td>{{ well.name }}</td>
+                        <td [ngClass]="backgroundChange(well.type)">{{ well.type }}</td>
+                        <td>{{ well.sourceKey }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <app-well (onNewWellAdded)="addNewWell($event)" [sourceKey]="sourceKeyValue"></app-well>
+        </div>
+    </div>
+<!-- </div> -->

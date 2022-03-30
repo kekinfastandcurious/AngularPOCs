@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-9">
+        <div class="drop-container">
+            <div class="drop-zone">
+                <h5 class="instructions-text">Drag components here to view!</h5>
+                <ng-template dragDropContainer></ng-template>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="list-item">
+            <div *ngFor="let item of draggableItems">
+                <div  draggable="true"
+                (dragend)="renderComponent(item)">{{item.tag}}</div>
+            </div>
+        </div>
+    </div>
+</div>
