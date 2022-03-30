@@ -30,7 +30,11 @@ export class WellComponent implements OnInit {
 
   constructor() {}
 
-  public wellTypes: string[] = ['Select', WellType.ESP, WellType.RLS];
+  public wellTypes = [
+    { value: '', tag: 'Select' },
+    { value: WellType.ESP, tag: WellType.ESP },
+    { value: WellType.RLS, tag: WellType.RLS },
+  ];
 
   public onSubmit() {
     this.onNewWellAdded.emit('Kekin');

@@ -18,7 +18,6 @@ export class WellListComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.pocService.getWellsList().subscribe((wells) => {
-      console.log('Wells', wells);
       this.wells = wells;
     });
   }
@@ -36,22 +35,19 @@ export class WellListComponent implements OnInit, AfterViewInit {
   }
 
   addNewWell(newWell: string) {
-    console.log('Add new Well..');
     const newWellDetails = this.wellComponent.wellForm.form.value;
 
-    console.log('## Valid', this.wellComponent.wellForm.valid);
     if (this.wellComponent.wellForm.valid) {
-      console.log('## Well Type', newWellDetails.wellType);
       this.wells.push({
         name: newWellDetails.wellName,
         type: newWellDetails.wellType,
         sourceKey: newWellDetails.sourceKey,
       });
+      this.wellComponent.wellForm.form.reset();
     }
   }
 
   onSourceKeySelect(sourceKey: string) {
-    console.log('SourceKey Selected:', sourceKey);
     this.sourceKeyValue = sourceKey;
   }
 }

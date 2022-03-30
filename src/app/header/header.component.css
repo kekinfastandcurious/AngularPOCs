@@ -1,12 +1,17 @@
 .navbar {
-    
 }
 
-.navbar ul{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+.navbar ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
-.navbar ul li{
-    list-style: none;
+.navbar ul li {
+  list-style: none;
+}
+
+.active {
+  background-color: #b3e6ff;
+  padding: 15px;
+  border-radius: 3px;
 }
